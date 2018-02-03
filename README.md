@@ -222,33 +222,33 @@ Progress: 59% #############################<span style="background-color: #FFFF0
 
 Where the progress explanation (prefix) and the progress text should be shown.
 
-Possible Values:
-	ProgressBar.PROGRESS_LOC_START or 0 - Show both at the start
-	ProgressBar.PROGRESS_LOC_MIDDLE or 1 - Show both at the middle of the bar
-	ProgressBar.PROGRESS_LOC_END or 2 - Show both at the end
-	ProgressBar.PROGRESS_LOC_EXP_START_PROGRESS_MID or 3 - Show explanation (prefix) at the start and the progress text at the middle of the bar
+Possible Values:<br/>
+	ProgressBar.PROGRESS_LOC_START or 0 - Show both at the start<br/>
+	ProgressBar.PROGRESS_LOC_MIDDLE or 1 - Show both at the middle of the bar<br/>
+	ProgressBar.PROGRESS_LOC_END or 2 - Show both at the end<br/>
+	ProgressBar.PROGRESS_LOC_EXP_START_PROGRESS_MID or 3 - Show explanation (prefix) at the start and the progress text at the middle of the bar<br/>
 	ProgressBar.PROGRESS_LOC_EXP_END_PROGRESS_MID or 4 - Show explanation (prefix) at the end and the progress text at the middle of the bar
 
-PROGRESS_LOC_START:
+PROGRESS_LOC_START:<br/>
 <span style="background-color: #FFFF00">Progress: 32%</span> ################----------------------------------&nbsp;
 
-PROGRESS_LOC_MIDDLE:
+PROGRESS_LOC_MIDDLE:<br/>
 \################ <span style="background-color: #FFFF00">Progress: 32%</span> ------------------&nbsp;
 
-PROGRESS_LOC_END:
+PROGRESS_LOC_END:<br/>
 \################---------------------------------- <span style="background-color: #FFFF00">Progress: 32%</span>
 
-PROGRESS_LOC_EXP_START_PROGRESS_MID:
+PROGRESS_LOC_EXP_START_PROGRESS_MID:<br/>
 <span style="background-color: #FFFF00">Progress:  </span>################----- <span style="background-color: #FFFF00">32%</span> -----------------------&nbsp;
 
-PROGRESS_LOC_EXP_END_PROGRESS_MID:
+PROGRESS_LOC_EXP_END_PROGRESS_MID:<br/>
 \################----- <span style="background-color: #FFFF00">32%</span> ----------------------- <span style="background-color: #FFFF00">Progress: </span>
 
 #### progress_format (default is "+p%")
 
 Format for the progress text. PyProg replaces special characters with actual values. Here is a list of special characters:
 
-"+p" -> Current percent
+"+p" -> Current percent<br/>
 "+c" -> Current status
 
 #### progress_explain (default is "Progress: ")
@@ -258,8 +258,8 @@ This is the progress explanation (prefix).
 Example position of progress explanation:
 <span style="background-color: #FFFF00">Progress: </span>32% ################----------------------------------&nbsp;
 
-Examples:
-	"Progress: "
+Examples:<br/>
+	"Progress: "<br/>
 	"Current Progress: "
 
 #### wrap_bar_prefix (default is " ")
@@ -302,7 +302,7 @@ Set the current progress.
 
 Params: (none)
 
-Update the progress bar so that it shows the current progress.
+Update the progress bar so that it shows the current progress.<br/>
 Note: Also call this to initiate the bar.
 
 #### end()
@@ -359,8 +359,8 @@ Params: progress_explain
 
 Set the progress explanation (prefix).
 
-Examples:
-	"Progress: "
+Examples:<br/>
+	"Progress: "<br/>
 	"Current Progress: "
 
 #### set_wrap_bar_text()
@@ -375,7 +375,7 @@ Params: progress_format
 
 Set the format for the progress text. PyProg replaces special characters with actual values. Here is a list of special characters:
 
-"+p" -> Current percent
+"+p" -> Current percent<br/>
 "+c" -> Current status
 
 ### Functions for ProgressIndicatorFunction
