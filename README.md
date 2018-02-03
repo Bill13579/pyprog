@@ -351,7 +351,7 @@ Set the complete symbol and the not complete symbol. `symbols` has to be a tuple
 
 Params: progress_loc
 
-Set the progress explanation (prefix) and the progress text location. See [the progress_loc parameter](#progress_loc "progress_loc") section for the possible values.
+Set the progress explanation (prefix) and the progress text location. See [the progress_loc parameter](#user-content-progress_loc-default-is-0 "progress_loc") section for the possible values.
 
 #### set_progress_explain()
 
