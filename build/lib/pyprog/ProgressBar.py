@@ -24,8 +24,8 @@ class ProgressBar:
 		self.wrap_bar_prefix = wrap_bar_prefix
 		self.wrap_bar_suffix = wrap_bar_suffix
 
-	def __print(self, data, end="\n"):
-		sys.stdout.write(data + end)
+	def __print(self, data, start="", end=""):
+		sys.stdout.write(start + data + end)
 
 	def set_prefix(self, prefix):
 		'''
@@ -159,7 +159,7 @@ class ProgressBar:
 			final = final[:bar_cut_from] + progress_str + final[bar_cut_to:]
 			final = final + self.progress_explain
 		final = self.p + final + self.s
-		self.__print(final, end="\r")
+		self.__print(final, start="\r")
 
 	def end(self):
 		'''

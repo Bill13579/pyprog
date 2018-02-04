@@ -1,7 +1,7 @@
 Metadata-Version: 1.0
 Name: pyprog
-Version: 1.0.1
-Summary: A library for creating customizable progress indicators.
+Version: 1.0.2
+Summary: A library for creating super customizable progress indicators.
 Home-page: https://github.com/Bill13579/pyprog
 Author: Bill Kudo
 Author-email: bluesky42624@gmail.com

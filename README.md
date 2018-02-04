@@ -4,7 +4,7 @@ PyProg is an Open-Source library for creating progress indicators (e.g. progress
 
 # Compatibility
 
-PyProg is compatible with both Python 3 and Python 2.
+PyProg is compatible with both Python 3 and Python 2, and will also work on Qt Console.
 
 # Getting Started
 

@@ -8,8 +8,8 @@ class ProgressIndicatorFraction:
 		self.length = total
 		self.current_stat = initial
 
-	def __print(self, data, end="\n"):
-		sys.stdout.write(data + end)
+	def __print(self, data, start="", end=""):
+		sys.stdout.write(start + data + end)
 
 	def set_prefix(self, prefix):
 		'''
@@ -42,7 +42,7 @@ class ProgressIndicatorFraction:
 		'''
 		final = str(self.current_stat) + "/" + str(self.length)
 		final = self.p + final + self.s
-		self.__print(final, end="\r")
+		self.__print(final, start="\r")
 
 	def end(self):
 		'''
