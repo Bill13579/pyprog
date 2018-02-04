@@ -1,0 +1,10 @@
+README.rst
+setup.cfg
+setup.py
+pyprog/ProgressBar.py
+pyprog/ProgressIndicatorFraction.py
+pyprog/__init__.py
+pyprog.egg-info/PKG-INFO
+pyprog.egg-info/SOURCES.txt
+pyprog.egg-info/dependency_links.txt
+pyprog.egg-info/top_level.txt

@@ -10,9 +10,9 @@ PyProg is compatible with both Python 3 and Python 2.
 
 ## Installation
 
-To install PyProg, download the wheel file (inside the wheels folder) for your version of Python, and use pip to install it.
+Latest Release: `pip install pyprog`
 
-Install PyProg: `pip install <path of the wheel file>`
+Latest Development Release: `pip install git+https://github.com/Bill13579/pyprog.git@develop`
 
 After you have installed PyProg, you can test if it has been successfully installed by running `import pyprog` in python. If PyProg was installed successfully, it should show no errors.
 

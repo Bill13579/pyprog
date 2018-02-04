@@ -1,0 +1,192 @@
+Metadata-Version: 1.0
+Name: pyprog
+Version: 1.0.1
+Summary: A library for creating customizable progress indicators.
+Home-page: https://github.com/Bill13579/pyprog
+Author: Bill Kudo
+Author-email: bluesky42624@gmail.com
+License: GNU AGPLv3
+Description: PyProg is an Open-Source library for creating progress indicators (e.g. progress bars). It helps you create customizable progress indicators. This library is for Python. It does not have any dependencies.
+        
+        =============
+        Compatibility
+        =============
+        
+        PyProg is compatible with both Python 3 and Python 2.
+        
+        ============
+        Installation
+        ============
+        
+        Latest build: ``pip install pyprog``
+        
+        Latest development build: ``pip install git+https://github.com/Bill13579/pyprog.git@develop``
+        
+        After you have installed PyProg, you can test if it has been successfully installed by running ``import pyprog`` in python. If PyProg was installed successfully, it should show no errors.
+        
+        ==================================
+        How to use the PyProg Progress Bar
+        ==================================
+        
+        To create a progress bar, follow these steps:
+        
+        1. Import PyProg: ``import pyprog``
+        2. Create a ``ProgressBar`` object: ``prog = pyprog.ProgressBar("", "")``
+        3. Show the bar: ``prog.update()``
+        4. To update the status, use ``prog.set_stat(<status>)`` to set the status and then use ``prog.update()`` to actually show the change
+        5. When finished, use ``prog.end()`` to make the Progress Bar last
+        
+        Example Code with Fake For loop:
+        
+        .. code-block:: python
+        
+        	import pyprog
+        	from time import sleep
+        
+        	# Create a PyProg ProgressBar Object
+        	prog = pyprog.ProgressBar(":-) ", " OK!")
+        
+        	# Show the initial status
+        	prog.update()
+        
+        	# Fake for loop
+        	for i in range(0, 100):
+        
+        		# Sleep for a while (This is just to slow down the for loop so that it won't end in an instant)
+        		sleep(0.1)
+        
+        		# Update status
+        		prog.set_stat(i + 1)
+        
+        		# Show (Update) the current status
+        		prog.update()
+        
+        	# Make the Progress Bar final
+        	prog.end()
+        
+        Output:
+        
+        .. code-block::
+        
+        	Initial State: 
+        	:-) Progress: 0% --------------------------------------------------  OK!
+        
+        	When progress is 50: 
+        	:-) Progress: 50% #########################-------------------------  OK!
+        
+        	Final State: 
+        	:-) Progress: 100% ##################################################  OK!
+        
+        Pretty Progress Bar
+        ===================
+        
+        You can also add more options to make it look good.
+        
+        Adding options ``complete_symbol="â–ˆ", not_complete_symbol="-"`` will change the original output to:
+        
+        .. code-block::
+        
+        	Initial State: 
+        	:-) Progress: 0% --------------------------------------------------  OK!
+        
+        	When progress is 50: 
+        	:-) Progress: 50% â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ-------------------------  OK!
+        
+        	Final State: 
+        	:-) Progress: 100% â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ  OK!
+        
+        Auto calculate the percentage
+        =============================
+        
+        PyProg can also auto calculate the current percentage. You just need to tell PyProg the total number of things you need to process.
+        
+        Change the line ``prog = pyprog.ProgressBar("", "")`` to ``prog = pyprog.ProgressBar("", "", <Total Number of things>)``, and PyProg will calculate the percentage for you based on the status that you give it.
+        
+        To use it in our simple progress bar code, if we have 37 tasks to do, we can change this:
+        
+        .. code-block:: python
+        
+        	# Create a PyProg ProgressBar Object
+        	prog = pyprog.ProgressBar(":-) ", " OK!")
+        
+        to this:
+        
+        .. code-block:: python
+        
+        	# Create a PyProg ProgressBar Object
+        	prog = pyprog.ProgressBar(":-) ", " OK!", 37)
+        
+        And also change the fake for loop from ``for i in range(0, 100):`` to ``for i in range(0, 37):``, and it will auto calculate the percentage and show it to the user.
+        
+        ===================================================
+        How to use the PyProg Progress Indicator (Fraction)
+        ===================================================
+        
+        To create a basic progress indicator (fraction), follow these steps:
+        
+        1. Import PyProg: ``import pyprog``
+        2. Create a ``ProgressIndicatorFraction`` object: ``prog = pyprog.ProgressIndicatorFraction("", "", <Total number of things>)`` (Replace "<Total number of things>" with the total number of tasks or things you need to process)
+        3. Show the indicator: ``prog.update()``
+        4. To update the status, use ``prog.set_stat(<status>)`` to set the status and then use ``prog.update()`` to actually show the change
+        5. When finished, use ``prog.end()`` to make the Progress Indicator (Fraction) last
+        
+        Example Code with Fake For loop (We are using 56 as the total in this example):
+        
+        .. code-block:: python
+        
+        	import pyprog
+        	from time import sleep
+        
+        	# Create a PyProg ProgressIndicatorFraction Object
+        	prog = pyprog.ProgressIndicatorFraction(":-) ", " OK!", 56)
+        
+        	# Show the initial status
+        	prog.update()
+        
+        	# Fake for loop
+        	for i in range(0, 56):
+        
+        		# Sleep for a while (This is just to slow down the for loop so that it won't end in an instant)
+        		sleep(0.1)
+        
+        		# Update status
+        		prog.set_stat(i + 1)
+        
+        		# Show (Update) the current status
+        		prog.update()
+        
+        	# Make the Progress Indicator (Fraction) final
+        	prog.end()
+        
+        Output:
+        
+        .. code-block::
+        
+        	Initial State: 
+        	:-) 0/56 OK!
+        
+        	When half done: 
+        	:-) 28/56 OK!
+        
+        	Final State: 
+        	:-) 56/56 OK!
+        
+        =============
+        Documentation
+        =============
+        
+        The documentation is at the Github page for this project.
+        
+        Github page: `<https://github.com/Bill13579/pyprog/>`_
+        
+        =======
+        Contact
+        =======
+        
+        If you want to support me, please contact me at kudoshiko@gmail.com.
+        
+        My website is at `<http://www.WhatsYourIdea.com/>`_
+        
+        
+Keywords: progress bar indicator pyprog
+Platform: UNKNOWN
