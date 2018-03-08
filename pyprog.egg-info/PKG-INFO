@@ -1,6 +1,6 @@
 Metadata-Version: 1.0
 Name: pyprog
-Version: 1.0.2
+Version: 1.1.0.post0
 Summary: A library for creating super customizable progress indicators.
 Home-page: https://github.com/Bill13579/pyprog
 Author: Bill Kudo
@@ -12,7 +12,7 @@ Description: PyProg is an Open-Source library for creating progress indicators (
         Compatibility
         =============
         
-        PyProg is compatible with both Python 3 and Python 2.
+        PyProg is compatible with both Python 3 and Python 2, and will also work on Qt Console.
         
         ============
         Installation
@@ -82,7 +82,7 @@ Description: PyProg is an Open-Source library for creating progress indicators (
         
         You can also add more options to make it look good.
         
-        Adding options ``complete_symbol="â–ˆ", not_complete_symbol="-"`` will change the original output to:
+        Adding options ``complete_symbol="█", not_complete_symbol="-"`` will change the original output to:
         
         .. code-block::
         
@@ -90,10 +90,10 @@ Description: PyProg is an Open-Source library for creating progress indicators (
         	:-) Progress: 0% --------------------------------------------------  OK!
         
         	When progress is 50: 
-        	:-) Progress: 50% â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ-------------------------  OK!
+        	:-) Progress: 50% █████████████████████████-------------------------  OK!
         
         	Final State: 
-        	:-) Progress: 100% â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ  OK!
+        	:-) Progress: 100% ██████████████████████████████████████████████████  OK!
         
         Auto calculate the percentage
         =============================

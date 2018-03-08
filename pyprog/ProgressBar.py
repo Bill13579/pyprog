@@ -27,6 +27,7 @@ class ProgressBar:
 
 	def __print(self, data, start="", end=""):
 		sys.stdout.write(start + data + end)
+		sys.stdout.flush()
 
 	def set_prefix(self, prefix):
 		'''

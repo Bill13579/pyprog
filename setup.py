@@ -6,7 +6,7 @@ with open('README.rst') as f:
 
 setup(
   name = 'pyprog',
-  version = '1.0.2',
+  version = '1.1.0-0',
   packages = find_packages(),
   description = ('A library for creating super customizable progress indicators.'),
   long_description = long_description,
