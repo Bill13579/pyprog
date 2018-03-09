@@ -294,30 +294,30 @@ Initial status to show on the indicator.
 
 #### set_stat()
 
-Available on: PyProg 1.0.0 ~
+Available on: PyProg 1.0.0 ~<br/>
 Params: current
 
 Set the current progress.
 
 #### stat()
 
-Available on: PyProg 1.1.0-0 ~
-Params: current
+Available on: PyProg 1.1.0-0 ~<br/>
+Params: current<br/>
 Note: This function is currently only available on the ProgressBar. Support for ProgressIndicatorFraction will come soon.
 
 Set the current progress and update the progress bar.
 
 #### progress()
 
-Available on: PyProg 1.1.0-0 ~
-Params: progress
+Available on: PyProg 1.1.0-0 ~<br/>
+Params: progress<br/>
 Note: This function is currently only available on the ProgressBar. Support for ProgressIndicatorFraction will come soon.
 
 Increase the progress by the given amount.
 
 #### update()
 
-Available on: PyProg 1.0.0 ~
+Available on: PyProg 1.0.0 ~<br/>
 Params: (none)
 
 Update the progress bar so that it shows the current progress.<br/>
@@ -325,71 +325,71 @@ Note: Also call this to initiate the bar.
 
 #### end()
 
-Available on: PyProg 1.0.0 ~
+Available on: PyProg 1.0.0 ~<br/>
 Params: (none)
 
 End the progress bar.
 
 #### end_m()
 
-Available on: PyProg 1.1.0-0 ~
-Params: msg
+Available on: PyProg 1.1.0-0 ~<br/>
+Params: msg<br/>
 Note: This function is currently only available on the ProgressBar. Support for ProgressIndicatorFraction will come soon.
 
 End the progress bar with a message.
 
 #### set_prefix()
 
-Available on: PyProg 1.0.0 ~
+Available on: PyProg 1.0.0 ~<br/>
 Params: prefix
 
 Set the prefix
 
 #### set_suffix()
 
-Available on: PyProg 1.0.0 ~
+Available on: PyProg 1.0.0 ~<br/>
 Params: suffix
 
 Set the suffix
 
 #### set_total()
 
-Available on: PyProg 1.0.0 ~
+Available on: PyProg 1.0.0 ~<br/>
 Params: total
 
 Set the total
 
 #### set_bar_length()
 
-Available on: PyProg 1.0.0 ~
+Available on: PyProg 1.0.0 ~<br/>
 Params: bar_length
 
 Set the length of the bar
 
 #### set_decimals()
 
-Available on: PyProg 1.0.0 ~
+Available on: PyProg 1.0.0 ~<br/>
 Params: decimals
 
 Set the number of decimals for the percent
 
 #### set_symbols()
 
-Available on: PyProg 1.0.0 ~
+Available on: PyProg 1.0.0 ~<br/>
 Params: symbols
 
 Set the complete symbol and the not complete symbol. `symbols` has to be a tuple: (complete symbol, not complete symbol)
 
 #### set_progress_loc()
 
-Available on: PyProg 1.0.0 ~
+Available on: PyProg 1.0.0 ~<br/>
 Params: progress_loc
 
 Set the progress explanation (prefix) and the progress text location. See [the progress_loc parameter](#user-content-progress_loc-default-is-0 "progress_loc") section for the possible values.
 
 #### set_progress_explain()
 
-Available on: PyProg 1.0.0 ~
+Available on: PyProg 1.0.0 ~<br/>
 Params: progress_explain
 
 Set the progress explanation (prefix).
@@ -400,14 +400,14 @@ Examples:<br/>
 
 #### set_wrap_bar_text()
 
-Available on: PyProg 1.0.0 ~
+Available on: PyProg 1.0.0 ~<br/>
 Params: prefix, suffix
 
 Set the wrap bar text (the prefix and the suffix of the bar).
 
 #### set_progress_format()
 
-Available on: PyProg 1.0.0 ~
+Available on: PyProg 1.0.0 ~<br/>
 Params: progress_format
 
 Set the format for the progress text. PyProg replaces special characters with actual values. Here is a list of special characters:
@@ -419,14 +419,14 @@ Set the format for the progress text. PyProg replaces special characters with ac
 
 #### set_stat()
 
-Available on: PyProg 1.0.0 ~
+Available on: PyProg 1.0.0 ~<br/>
 Params: current
 
 Set the current progress.
 
 #### update()
 
-Available on: PyProg 1.0.0 ~
+Available on: PyProg 1.0.0 ~<br/>
 Params: (none)
 
 Update the progress indicator so that it shows the current progress.
@@ -434,28 +434,28 @@ Note: Also call this to initiate the indicator.
 
 #### end()
 
-Available on: PyProg 1.0.0 ~
+Available on: PyProg 1.0.0 ~<br/>
 Params: (none)
 
 End the progress indicator.
 
 #### set_prefix()
 
-Available on: PyProg 1.0.0 ~
+Available on: PyProg 1.0.0 ~<br/>
 Params: prefix
 
 Set the prefix
 
 #### set_suffix()
 
-Available on: PyProg 1.0.0 ~
+Available on: PyProg 1.0.0 ~<br/>
 Params: suffix
 
 Set the suffix
 
 #### set_total()
 
-Available on: PyProg 1.0.0 ~
+Available on: PyProg 1.0.0 ~<br/>
 Params: total
 
 Set the total
