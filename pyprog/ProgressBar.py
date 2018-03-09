@@ -10,6 +10,7 @@ class ProgressBar:
 	PROGRESS_LOC_EXP_END_PROGRESS_MID = 4
 
 	def __init__(self, prefix, suffix, total=100, bar_length=50, initial=0, decimals=0, complete_symbol="#", not_complete_symbol="-", progress_loc=0, progress_format="+p%", progress_explain="Progress: ", wrap_bar_prefix=" ", wrap_bar_suffix=" "):
+		self.__end_m = False
 		self.p = prefix
 		self.s = suffix
 		self.length = bar_length
@@ -26,6 +27,7 @@ class ProgressBar:
 
 	def __print(self, data, start="", end=""):
 		sys.stdout.write(start + data + end)
+		sys.stdout.flush()
 
 	def set_prefix(self, prefix):
 		'''
@@ -105,9 +107,23 @@ class ProgressBar:
 
 	def set_stat(self, current):
 		'''
-		Set the current progress. Only accept integers.
+		Set the current progress.
 		'''
 		self.current_stat = current
+
+	def stat(self, current):
+		'''
+		Set the current progress and showing the progress bar.
+		'''
+		self.current_stat = current
+		self.update()
+
+	def progress(self, progress=1):
+		'''
+		Progress forward by an amount.
+		'''
+		self.current_stat += progress
+		self.update()
 
 	def update(self):
 		'''
@@ -120,11 +136,15 @@ class ProgressBar:
 		final = self.complete_sym * blocks_to_fill + self.not_complete_sym * blocks_not_to_fill
 		final = self.wrap_bar_prefix + final + self.wrap_bar_suffix
 		percent = round(round(decimal, self.decimals + 2) * 100, self.decimals + 2)
-		if percent.is_integer():
-			progress_str = self.progress_format.replace("+p", str(int(percent)))
+		if self.__end_m:
+			progress_str = ""
+			self.progress_explain = self.__end_m
 		else:
-			progress_str = self.progress_format.replace("+p", str(percent))
-		progress_str = progress_str.replace("+c", str(self.current_stat))
+			if percent.is_integer():
+				progress_str = self.progress_format.replace("+p", str(int(percent)))
+			else:
+				progress_str = self.progress_format.replace("+p", str(percent))
+			progress_str = progress_str.replace("+c", str(self.current_stat))
 		if self.progress_loc == ProgressBar.PROGRESS_LOC_START:
 			final = self.progress_explain + progress_str + final
 		elif self.progress_loc == ProgressBar.PROGRESS_LOC_MIDDLE:
@@ -161,9 +181,16 @@ class ProgressBar:
 		final = self.p + final + self.s
 		self.__print(final, start="\r")
 
+	def end_m(self, msg):
+		'''
+		End the progress bar with a message.
+		'''
+		self.__end_m = msg
+		self.update()
+		self.end()
+
 	def end(self):
 		'''
 		End the progress bar.
 		'''
 		self.__print("", end="\n")
-
