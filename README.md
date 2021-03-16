@@ -459,9 +459,3 @@ Available on: PyProg 1.0.0 ~<br/>
 Params: total
 
 Set the total
-
-# Contact
-
-If you want to support me, please contact me at kudoshiko@gmail.com.
-
-My website is at [http://www.WhatsYourIdea.com/](http://www.WhatsYourIdea.com/ "Website")
