@@ -10,7 +10,7 @@ setup(
   packages = find_packages(),
   description = ('A library for creating super customizable progress indicators.'),
   long_description = long_description,
-  author = 'Bill Kudo',
+  author = 'BillK',
   author_email = 'bluesky42624@gmail.com',
   license = 'GNU AGPLv3',
   url = 'https://github.com/Bill13579/pyprog',
